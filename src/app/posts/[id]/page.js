@@ -1,7 +1,8 @@
 'use client'
-
+import Comments from "@/app/components/comments";
 import { Box, Heading, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
+
 
 
 export default function SinglePost({params}) {
@@ -37,8 +38,12 @@ export default function SinglePost({params}) {
         <Box>
             {post ? (
                 <Box>
-                   <Heading as={"h2"}>{post.title}</Heading>
-                   <Text>{post.content}</Text>
+                    <Text color={"#CBD5E0"} _hover={{color: "#2C7A7B"}}>{post.user.username}</Text>
+                   <Heading as='h2' size={"lg"} color={"white"}>{post.title}</Heading>
+                   <Text color={"GrayText"}>{post.content}</Text>
+                   <Box>
+                   <Comments postId={post._id}/>
+                    </Box>
                 </Box>
 
             ) : 
