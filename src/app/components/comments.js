@@ -1,6 +1,7 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Button, ButtonGroup, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import CommentInput from "./commentInput";
+import { ChatIcon, LinkIcon } from "@chakra-ui/icons";
 
 export default function Comments({postId}) {
     const [comments, setComments] = useState('')
@@ -33,6 +34,17 @@ export default function Comments({postId}) {
         <Box>
             {comments && (
                 <Box>
+                <ButtonGroup>
+                    <Button alignItems={"center"} borderRadius={10} p={2}>
+                        <ChatIcon />
+                        <Text ml={1}>{comments.length}</Text>
+                    </Button>
+                    <Button>
+                        <LinkIcon />
+                        <Text ml={1}>Compartir</Text>
+                    </Button>
+                </ButtonGroup>
+                
                 <CommentInput  postId={postId} updateComment={getComments}/>
                 {comments.filter((comment) => comment.post == postId).map((comment) => (
                     <Box key={comment._id}>
