@@ -1,4 +1,4 @@
-import { Box, Button, FormControl, FormErrorMessage, Input } from "@chakra-ui/react";
+import { Box, Button, Flex, FormControl, FormErrorMessage, Input } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
 export default function CommentInput({postId, updateComment}) {
@@ -48,14 +48,15 @@ export default function CommentInput({postId, updateComment}) {
 
     return(
         <Box>
-            <FormControl isInvalid={error}>
-                <Input type="text" maxLength={300} minLength={1} value={comment}
-                    onChange={(e) => setComment(e.target.value)}/>
-                    <FormErrorMessage>
-                    {error}
-                    </FormErrorMessage>
-                <Button onClick={handleNewComment}>Send</Button>
-                
+            <FormControl isInvalid={error} >
+                <Flex>
+                    <Input type="text" maxLength={300} minLength={1} value={comment}
+                        onChange={(e) => setComment(e.target.value)}/>
+                        <FormErrorMessage>
+                        {error}
+                        </FormErrorMessage>
+                    <Button onClick={handleNewComment}>Send</Button>
+                </Flex>
             </FormControl>
         </Box>
     )
