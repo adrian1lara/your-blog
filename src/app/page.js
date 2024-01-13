@@ -1,12 +1,14 @@
 'use client'
 
+import { Box } from "@chakra-ui/react";
 import Posts from "./components/posts";
 
 export default function Home() {
     return (
-        <div>
-            <h1>Hello</h1>
-            <Posts/>
-        </div>
+        <Box>
+            <Box margin={"auto"} border={"1px solid"}>
+                <Posts />
+            </Box>
+        </Box>
     )
 }
