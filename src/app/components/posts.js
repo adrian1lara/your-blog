@@ -1,5 +1,5 @@
 
-import { Heading, Box, Text } from "@chakra-ui/react";
+import { Heading, Box, Text, Link } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import Comments from "./comments";
 
@@ -37,12 +37,15 @@ export default function Posts() {
             {post ? (
                 <Box>
                 {post.map((post) => (
-                    <Box key={post._id}>
-                        <Text>{post.user.username}</Text>
-                        <Heading as={"h2"}>{post.title}</Heading>
-                        <Text>{post.content}</Text>
-                        <Comments postId={post._id}/>
-                    </Box>
+
+                    <Link key={post._id} href={`/posts/${post._id}`}>
+                        <Box>
+                            <Text>{post.user.username}</Text>
+                            <Heading as={"h2"}>{post.title}</Heading>
+                            <Text>{post.content}</Text>
+                            <Comments postId={post._id}/>
+                        </Box>
+                    </Link>
 
                     
                 ))}
