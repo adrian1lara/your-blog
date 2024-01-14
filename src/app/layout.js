@@ -8,7 +8,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
  return (
     <html lang="en">
-      <body style={{margin:"auto", maxWidth: "960px", background: "#111618"}}>
+      <body style={{margin:"auto", background: "#111618"}}>
         <ChakraProvider>{children}</ChakraProvider>
         </body>
     </html>
