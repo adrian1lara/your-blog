@@ -31,8 +31,8 @@ export default function Posts() {
     }
 
     return ( 
-        <Box>
-            <Heading>Posts</Heading>
+        <Box >
+            <Heading as={"h2"} color={"GrayText"} p={4} size={"xl"}>Recent posts</Heading>
 
             {post ? (
                 <Box  width={"100%"} margin={"auto"}>
@@ -44,7 +44,7 @@ export default function Posts() {
                             <Flex >
                             <Text color={"#CBD5E0"} _hover={{color: "#2C7A7B"}}>{post.user.username}  
                             </Text><Text mr={1} ml={1} color={"#CBD5E0"}> • </Text>
-                            <Text as={"span"} color={"#CBD5E0"}> {post.latest}</Text>
+                            <Text as={"span"} color={"#CBD5E0"}> {post.latest} ago</Text>
                             </Flex>
                             
                             <Heading as='h2' size={"md"} color={"white"}>{post.title}</Heading>
@@ -54,7 +54,6 @@ export default function Posts() {
                         <Divider />
                     </Link>
 
-                    
                 ))}
                 </Box>
             ): 
