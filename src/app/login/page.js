@@ -37,7 +37,7 @@ export default function Login() {
 
 
     return (
-        <Box margin={"auto"} maxWidth={960}>
+        <Box margin={"auto"} maxWidth={960} color={"white"}>
             <Heading as={"h1"} textAlign={"center"} mt={100}>Log in</Heading>
 
             <FormControl isInvalid={error} margin={"auto"} maxWidth={400}>
