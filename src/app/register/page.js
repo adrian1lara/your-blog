@@ -1,6 +1,7 @@
 'use client'
 
 import { Button, FormErrorMessage, Input, FormControl, Box, Text, Center,Link, Heading } from "@chakra-ui/react"
+import { color } from "framer-motion"
 //import Link from "next/link"
 import { useState } from "react"
 
@@ -42,7 +43,7 @@ export default function Register() {
 
     return (
         <Box margin={"auto"}
-        maxWidth={960}>
+        maxWidth={960} color={"white"}>
 
             <Heading as={"h1"} textAlign={"center"} mt={100}>Sign Up </Heading>
 
