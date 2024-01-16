@@ -1,7 +1,8 @@
 'use client'
 import Comments from "@/app/components/comments";
 import OutNav from "@/app/components/noUserNav";
-import { Avatar, Box, Flex, Heading, Text } from "@chakra-ui/react";
+import LogNav from "@/app/components/userNav";
+import { Avatar, Box, Flex, Heading, Skeleton, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
 
@@ -9,6 +10,13 @@ import { useEffect, useState } from "react";
 export default function SinglePost({params}) {
     const id = params.id;
     const [post, setPost] = useState(null)
+
+    const [accessToken, setAccessToken] = useState('');
+
+    useEffect(() => {
+        const token = localStorage.getItem("accessToken");
+        setAccessToken(token);
+      }, []);
 
     useEffect(() => {
         if(id) {
@@ -37,7 +45,7 @@ export default function SinglePost({params}) {
 
     return (
         <Box>
-        <OutNav/>
+            {accessToken ? <LogNav /> : <OutNav />}
             <Box margin={"auto"} mt={"10%"} maxWidth={"960px"}>
                 {post ? (
                     <Box>
@@ -54,8 +62,8 @@ export default function SinglePost({params}) {
                         </Box>
                     </Box>
 
-                ) : 
-                <Text>Loading...</Text>
+                ) :
+                    <Text color={"whitesmoke"}>Loading..</Text>
                 }
 
             </Box>
