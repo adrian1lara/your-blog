@@ -47,7 +47,7 @@ export default function CommentInput({postId, updateComment}) {
 
 
     return(
-        <Box>
+        <Box mt={2}>
             <FormControl isInvalid={error} >
                 <Flex>
                     <InputGroup >
@@ -55,10 +55,14 @@ export default function CommentInput({postId, updateComment}) {
                     <Input 
                     borderRadius={"2xl"}
                     borderColor={"gray"}
+                    color={"white"}
                     type="text" maxLength={300} minLength={1} value={comment}
                         onChange={(e) => setComment(e.target.value)} />
                     <InputRightElement mr={3}  >
-                        <Button onClick={handleNewComment} pr={8} pl={8} bg={"#38B2AC"} borderRadius={"3xl"} >Send</Button>
+                        <Button onClick={handleNewComment} 
+                        pr={7} pl={7} bg={"#203033"} borderRadius={"2xl"} 
+                        color={"white"} size={"sm"}
+                        _hover={{bg: "#33464C"}}>Send</Button>
                     </InputRightElement>
                     </InputGroup>
 
