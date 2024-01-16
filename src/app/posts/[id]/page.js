@@ -1,6 +1,7 @@
 'use client'
 import Comments from "@/app/components/comments";
-import { Box, Heading, Text } from "@chakra-ui/react";
+import OutNav from "@/app/components/noUserNav";
+import { Avatar, Box, Flex, Heading, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
 
@@ -36,20 +37,28 @@ export default function SinglePost({params}) {
 
     return (
         <Box>
-            {post ? (
-                <Box>
-                    <Text color={"#CBD5E0"} _hover={{color: "#2C7A7B"}}>{post.user.username}</Text>
-                   <Heading as='h2' size={"lg"} color={"white"}>{post.title}</Heading>
-                   <Text color={"GrayText"}>{post.content}</Text>
-                   <Box>
-                   <Comments postId={post._id}/>
+        <OutNav/>
+            <Box margin={"auto"} mt={"10%"} maxWidth={"960px"}>
+                {post ? (
+                    <Box>
+                        <Flex>
+                            <Avatar mr={2} size={"sm"} src="https://i.pinimg.com/736x/92/26/d7/9226d738bb7e00aa1bff0b73b786ae00.jpg"/>
+                            <Text color={"#CBD5E0"} _hover={{color: "#2C7A7B"}} fontWeight={"bold"}>{post.user.username}</Text>
+                            <Text mr={1} ml={1} color={"#CBD5E0"}> • </Text>
+                            <Text as={"span"} color={"#CBD5E0"}> {post.latest} ago</Text>
+                        </Flex>
+                    <Heading as='h2' size={"lg"} color={"white"} mt={2}>{post.title}</Heading>
+                    <Text color={"GrayText"}>{post.content}</Text>
+                    <Box>
+                    <Comments postId={post._id}/>
+                        </Box>
                     </Box>
-                </Box>
 
-            ) : 
-            <Text>Loading...</Text>
-            }
+                ) : 
+                <Text>Loading...</Text>
+                }
 
+            </Box>
         </Box>
     )
 }
