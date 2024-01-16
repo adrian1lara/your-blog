@@ -12,7 +12,7 @@ export default function OutNav() {
             <Flex justifyContent={"space-between"} m={1} alignItems={"center"}>
                 <Box display={"flex"} alignItems={"center"} >
                     <Image src={Logo} alt="bloggy logo"  style={{ height: "50px", width: "50px", }}/>
-                    <Heading as={"h2"} color={"white"} ml={1} >Bloggy</Heading>
+                    <Heading as={"h2"} color={"white"} ml={1} ><Link _hover={{ textDecor: "none"}} href="/">Bloggy</Link></Heading>
                 </Box>
                 <InputGroup  maxWidth={"960px"} >  
                     <Input  variant={"filled"}  _hover={{ bg: "#33464C"}} bg={"#203033"} 
