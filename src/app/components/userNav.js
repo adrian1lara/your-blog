@@ -71,7 +71,7 @@ export default function LogNav() {
             </Hide>
 
             <Show below="md">
-                    <Box m={1}>
+                    <Box m={1} >
                         <Flex justifyContent={"space-between"}>
                         <Center>
                         <Avatar  size={"sm"}/>
