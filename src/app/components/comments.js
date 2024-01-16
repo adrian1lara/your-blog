@@ -1,4 +1,4 @@
-import { Box, Button, ButtonGroup, Text } from "@chakra-ui/react";
+import { Avatar, Box, Button, ButtonGroup, Flex, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import CommentInput from "./commentInput";
 import { ChatIcon, LinkIcon } from "@chakra-ui/icons";
@@ -34,7 +34,7 @@ export default function Comments({postId}) {
         <Box>
             {comments && (
                 <Box>
-                <ButtonGroup>
+                <ButtonGroup mt={2}>
                     <Button alignItems={"center"} borderRadius={10} p={2}>
                         <ChatIcon />
                         <Text ml={1}>{comments.length}</Text>
@@ -47,9 +47,15 @@ export default function Comments({postId}) {
                 
                 <CommentInput  postId={postId} updateComment={getComments}/>
                 {comments.filter((comment) => comment.post == postId).map((comment) => (
-                    <Box key={comment._id}>
-                        <Text>{comment.user.username}</Text>
-                        <Text>{comment.comment}</Text>
+                    <Box key={comment._id} mt={6} >
+                        <Flex alignItems={"center"}>
+                            <Avatar mr={2} size={"sm"} />
+                            <Text color={"white"} as={"b"}>{comment.user.username}</Text>
+                        </Flex>
+                        <Box ml={4} mt={1} borderLeft={"1px solid gray"}>
+                        <Text color={"white"} p={2} ml={4}>{comment.comment}</Text>
+                        </Box>
+                        
                     </Box>
                 ))}
                 
