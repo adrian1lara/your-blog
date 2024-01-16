@@ -12,6 +12,8 @@ import { Button } from "@chakra-ui/react";
 
 
     return (
-        <Button onClick={handleLogOut}>Log out</Button>
+        <Button onClick={handleLogOut} borderRadius={"3xl"}
+        bg={"#203033"} color={"white"} 
+        _hover={{bgColor: "#C53030"}}>Log out</Button>
     )
  }
