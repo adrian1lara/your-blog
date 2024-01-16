@@ -8,7 +8,7 @@ export default function Home() {
     return (
         <Box>
             <OutNav />
-            <Box margin={"auto"} mt={"6%"} maxWidth={"960px"} border={"1px solid"}>
+            <Box margin={"auto"} mt={"10%"} maxWidth={"960px"} border={"1px solid"}>
                 <Posts />
             </Box>
         </Box>
