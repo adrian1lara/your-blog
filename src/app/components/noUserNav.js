@@ -15,7 +15,7 @@ export default function OutNav() {
                     <Image src={Logo} alt="bloggy logo"  style={{ height: "50px", width: "50px", }}/>
                     <Heading as={"h2"} color={"white"} ml={1} ><Link _hover={{ textDecor: "none"}} href="/">Bloggy</Link></Heading>
                 </Box>
-                <InputGroup  maxWidth={"960px"} >  
+                <InputGroup  width={"60%"} margin={"auto"} >  
                     <Input  variant={"filled"}  _hover={{ bg: "#33464C"}} bg={"#203033"} 
                     placeholder="Search in bloggy" borderRadius={"3xl"}/>
                     <InputRightElement>
