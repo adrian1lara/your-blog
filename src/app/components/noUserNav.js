@@ -2,6 +2,7 @@ import { SearchIcon } from "@chakra-ui/icons";
 import { Heading, Box, Flex, InputGroup, Input, InputRightElement, Link, Divider, Hide, Show, Center } from "@chakra-ui/react";
 import Logo from "../../../public/logo.png"
 import Image from "next/image";
+import SearchBar from "./searchBar";
 
 
 export default function OutNav() {
@@ -15,13 +16,7 @@ export default function OutNav() {
                     <Image src={Logo} alt="bloggy logo"  style={{ height: "50px", width: "50px", }}/>
                     <Heading as={"h2"} color={"white"} ml={1} ><Link _hover={{ textDecor: "none"}} href="/">Bloggy</Link></Heading>
                 </Box>
-                <InputGroup  width={"60%"} margin={"auto"} >  
-                    <Input  variant={"filled"}  _hover={{ bg: "#33464C"}} bg={"#203033"} 
-                    placeholder="Search in bloggy" borderRadius={"3xl"}/>
-                    <InputRightElement>
-                            <SearchIcon color={"white"}/>
-                    </InputRightElement>
-                </InputGroup>
+                <SearchBar />
 
                 <Box>
                     <Link href="/login" bg={"#203033"} p={3} borderRadius={"3xl"} color={"whitesmoke"} mr={1}
