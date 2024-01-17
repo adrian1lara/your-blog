@@ -46,7 +46,8 @@ export default function Comments({postId}) {
                 </ButtonGroup>
                 
                 <CommentInput  postId={postId} updateComment={getComments}/>
-                {comments.filter((comment) => comment.post == postId).map((comment) => (
+                {comments.filter((comment) => comment.post == postId)
+                .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)).map((comment) => (
                     <Box key={comment._id} mt={6} >
                         <Flex alignItems={"center"}>
                             <Avatar mr={2} size={"sm"} />
