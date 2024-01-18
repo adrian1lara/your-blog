@@ -56,8 +56,8 @@ export default function SearchBar(){
 
     return (
         <Box>
-            <InputGroup width={"xl"}>
-                <Input onClick={onOpen} placeholder="Search in bloggy..." /> 
+            <InputGroup width={"xl"} >
+                <Input onClick={onOpen} placeholder="Search in bloggy..." borderRadius={"2xl"} border={"1px solid gray"} /> 
                 <InputLeftElement>
                     <Search2Icon  color={"white"}/>
                 </InputLeftElement>
@@ -69,7 +69,7 @@ export default function SearchBar(){
                 <ModalContent bg={"#111618"}>
                 <ModalBody>
                     <InputGroup>
-                    <Input onChange={filterBySearch} color={"white"} placeholder="Search in bloggy..."/>
+                    <Input onChange={filterBySearch} color={"white"} placeholder="Search in bloggy..." borderRadius={"2xl"} border={"1px solid gray"}/>
                     <InputLeftElement>
                         <Search2Icon color={"white"}/>
                     </InputLeftElement>
