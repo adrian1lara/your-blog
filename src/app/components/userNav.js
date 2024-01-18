@@ -52,12 +52,13 @@ export default function LogNav() {
                         <Flex alignItems={"center"}>
                             <Text color={"white"} mr={1}
                             as={"b"}>{user.username}</Text>
-                            <Avatar  size={"sm"}/>
+                            <Avatar  size={"sm"} mr={4}/>
+                            <LogOutButton/>
                         </Flex>
                         
                     </Box>
 
-                    <LogOutButton/>
+                    
                 </Flex>
                 <Divider />
             </Box>
