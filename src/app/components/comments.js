@@ -37,7 +37,9 @@ export default function Comments({postId}) {
                 <ButtonGroup mt={2}>
                     <Button alignItems={"center"} borderRadius={10} p={2}>
                         <ChatIcon />
-                        <Text ml={1}>{comments.length}</Text>
+                        <Text mr={1}>
+                            {comments.filter((comment) => comment.post == postId).length}
+                        </Text>
                     </Button>
                     <Button>
                         <LinkIcon />
