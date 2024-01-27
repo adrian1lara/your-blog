@@ -17,7 +17,7 @@ export default function Home() {
     return (
         <Box>
             {accessToken ? <LogNav /> : <OutNav />}
-            <Box margin={"auto"} mt={"10%"} maxWidth={"960px"} border={"1px solid"}>
+            <Box margin={"auto"} mt={"10%"} maxWidth={"960px"} >
                 <Posts />
             </Box>
         </Box>
