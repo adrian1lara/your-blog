@@ -1,9 +1,10 @@
 'use client'
 
 import { Button, FormErrorMessage, Input, FormControl, Box, Text, Center,Link, Heading } from "@chakra-ui/react"
-import { color } from "framer-motion"
+import { useRouter } from "next/navigation"
 //import Link from "next/link"
 import { useState } from "react"
+
 
 export default function Register() {
 
@@ -11,6 +12,7 @@ export default function Register() {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
+    const router = useRouter()
 
     const handleSignUp = async() => {
         try {
@@ -29,6 +31,7 @@ export default function Register() {
 
             if(res.ok) {
                 //its ok
+                router.push("/login")
             } else {
                 const errorData = await res.json()
                 setError(errorData.message)
