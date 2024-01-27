@@ -16,7 +16,7 @@ export default function LogNav() {
 
         try {
 
-            const res = await fetch(`http://localhost:3000/blog-api/users/${accessToken}`)
+            const res = await fetch(`https://yourblog-api.fly.dev/blog-api/users/${accessToken}`)
 
             const resData = await res.json()
             
