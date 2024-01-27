@@ -1,5 +1,5 @@
 # Bloggy
-Bloggy is my personal blog separeted in three parts, the frontend to the user [link](https://your-blog-three.vercel.app/), the frontend for me [link](https://github.com/adrian1lara/your-blog) and the backend to my rest api [link](https://your-blog-three.vercel.app/).
+Bloggy is my personal blog separeted in three parts, the frontend to the user [link](https://your-blog-three.vercel.app/), the frontend for me [link](https://github.com/adrian1lara/myblog) and the backend to my rest api [link](https://github.com/adrian1lara/blog-api).
 
 
 ## Getting Started
