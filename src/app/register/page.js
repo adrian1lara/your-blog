@@ -15,7 +15,7 @@ export default function Register() {
     const handleSignUp = async() => {
         try {
 
-            const res = await fetch("http://localhost:3000/blog-api/register", {
+            const res = await fetch("https://yourblog-api.fly.dev/blog-api/register", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

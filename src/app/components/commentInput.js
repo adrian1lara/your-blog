@@ -14,7 +14,7 @@ export default function CommentInput({postId, updateComment}) {
             }  else {
                 const accessToken = localStorage.getItem('accessToken')
 
-                const res = await fetch(`http://localhost:3000/blog-api/posts/${postId}/new-comment`, {
+                const res = await fetch(`https://yourblog-api.fly.dev/blog-api/posts/${postId}/new-comment`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

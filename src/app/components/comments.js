@@ -11,7 +11,7 @@ export default function Comments({postId}) {
     const getComments = async()=> { 
         try {
             
-            const res = await fetch("http://localhost:3000/blog-api/comments/allComments")
+            const res = await fetch("https://yourblog-api.fly.dev/blog-api/comments/allComments")
             const dataRes = await res.json()
 
             if(res.ok) {

@@ -12,7 +12,7 @@ export default function Login() {
 
     const handleLogin = async() => {
         try {
-            const res = await fetch('http://localhost:3000/blog-api/login', {
+            const res = await fetch('https://yourblog-api.fly.dev/blog-api/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

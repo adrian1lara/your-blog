@@ -26,7 +26,7 @@ export default function SinglePost({params}) {
 
     const getPost = async(postId) => {
         try {
-            const res = await fetch(`http://localhost:3000/blog-api/post/${postId}`)
+            const res = await fetch(`https://yourblog-api.fly.dev/blog-api/post/${postId}`)
 
             const dataRes = await res.json()
 

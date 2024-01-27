@@ -14,7 +14,7 @@ export default function Posts() {
     const getPosts = async() => {
 
         try {
-            const res = await fetch("http://localhost:3000/blog-api/posts/allPosts")
+            const res = await fetch("https://yourblog-api.fly.dev/blog-api/posts/allPosts")
             const dataResponse = await res.json()
 
             if(res.ok) {
