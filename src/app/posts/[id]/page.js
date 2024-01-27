@@ -56,7 +56,7 @@ export default function SinglePost({params}) {
                             <Text as={"span"} color={"#CBD5E0"}> {post.latest} ago</Text>
                         </Flex>
                     <Heading as='h2' size={"lg"} color={"white"} mt={2}>{post.title}</Heading>
-                    <Text color={"GrayText"}>{post.content}</Text>
+                    <Text color={"#CBD5E0"}>{post.content}</Text>
                     <Box>
                     <Comments postId={post._id}/>
                         </Box>

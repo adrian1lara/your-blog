@@ -32,7 +32,7 @@ export default function Posts() {
 
     return ( 
         <Box >
-            <Heading as={"h2"} color={"GrayText"} p={4} size={"xl"}>Recent posts</Heading>
+            <Heading as={"h2"} color={"#CBD5E0"} p={4} size={"xl"}>Recent posts</Heading>
 
             {post ? (
                 <Box  width={"100%"} margin={"auto"}>
@@ -49,7 +49,7 @@ export default function Posts() {
                             </Flex>
                             
                             <Heading as='h2' size={"md"} color={"white"} mt={2}>{post.title}</Heading>
-                            <Text textColor={"GrayText"}>{post.content}</Text>
+                            <Text textColor={"#CBD5E0"}>{post.content}</Text>
 
                         </Box>
                         <Divider />
